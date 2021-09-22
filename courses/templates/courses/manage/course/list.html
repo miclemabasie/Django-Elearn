@@ -18,6 +18,7 @@
                         <p class="card-text">{{course.overview}}</p>
                         <a href="{% url 'course_edit' course.id%}" class="card-link">Edit</a>
                         <a href="{% url 'course_delete' course.id%}" class="card-link">Delete</a>
+                        <a href="{% url 'course_module_update' course.id%}" class="card-link">Edit module</a>
                     </div>
                 </div>
             </div>
