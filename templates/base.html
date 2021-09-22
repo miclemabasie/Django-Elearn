@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body class="bg-dark">
+
+{% include "utils/navigation.html" %}
+<div class="container">
+    {% block content %}{% endblock content %}
+</div>
+
+<script src="{% static 'bootstrap/js/allinonebootstrap.js' %}"></script>
+<script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+
+
+{% block domready %}{% endblock domready %}
+</body>
+</html>
