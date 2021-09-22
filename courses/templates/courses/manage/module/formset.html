@@ -1,6 +1,14 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Edit {{course.title}}{% endblock title %}
 
 {% block content %}
-  
-{{formset}}
+    <form action="" method="POST" class="my-4">
+        {{formset|crispy}}
+        {% csrf_token %}   
+        <input type="submit" class="form-control btn btn-primary" value="Update Module">
+    </form>
 {% endblock content %}
+
+{% block domready %}{% endblock domready %}
